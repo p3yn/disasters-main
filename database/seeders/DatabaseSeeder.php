@@ -19,61 +19,63 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        City::firstOrCreate([
-            'name' => 'Rosarito'
-        ]);
-        City::firstOrCreate([
-            'name' => 'Tijuana'
-        ]);
-        City::firstOrCreate([
-            'name' => 'Ensenada'
-        ]);
-        City::firstOrCreate([
-            'name' => 'Mexicali'
-        ]);
-        City::firstOrCreate([
-            'name' => 'Tecate'
-        ]);
+        // City::firstOrCreate([
+        //     'name' => 'Rosarito'
+        // ]);
+        // City::firstOrCreate([
+        //     'name' => 'Tijuana'
+        // ]);
+        // City::firstOrCreate([
+        //     'name' => 'Ensenada'
+        // ]);
+        // City::firstOrCreate([
+        //     'name' => 'Mexicali'
+        // ]);
+        // City::firstOrCreate([
+        //     'name' => 'Tecate'
+        // ]);
 
-        PublicService::firstOrCreate([
-            'name' => 'Agua'
-        ]);
+        // PublicService::firstOrCreate([
+        //     'name' => 'Agua'
+        // ]);
 
-        PublicService::firstOrCreate([
-            'name' => 'Luz'
-        ]);
+        // PublicService::firstOrCreate([
+        //     'name' => 'Luz'
+        // ]);
 
-        PublicService::firstOrCreate([
-            'name' => 'Gas'
-        ]);
+        // PublicService::firstOrCreate([
+        //     'name' => 'Gas'
+        // ]);
 
-        PublicService::firstOrCreate([
-            'name' => 'Drenaje'
-        ]);
+        // PublicService::firstOrCreate([
+        //     'name' => 'Drenaje'
+        // ]);
 
-        PublicService::firstOrCreate([
-            'name' => 'Internet'
-        ]);
+        // PublicService::firstOrCreate([
+        //     'name' => 'Internet'
+        // ]);
         
-        DamageLevel::firstOrCreate([
-            'name' => 'Perdida total',
-            'level' => '0'
-        ]);
+        // DamageLevel::firstOrCreate([
+        //     'name' => 'Perdida total',
+        //     'level' => '0'
+        // ]);
 
-        DisasterType::firstOrCreate([
-            'name' =>  'Emergencia Policial',
-            'code' => 'EMP'
-        ]);
+        // DisasterType::firstOrCreate([
+        //     'name' =>  'Emergencia Policial',
+        //     'code' => 'EMP'
+        // ]);
 
 
 
-        Disaster::firstOrCreate([
-            'date' => '',
-            'time' => '',
-            //'location' =>  '32.527258' ,'-117.121486',
-            'casualties' => '300',
-            'description' => 'Desastre ocurrido en el parque méxico de playas de tijuana, perro atropellado'
+        // Disaster::firstOrCreate([
+        //     'date' => '',
+        //     'time' => '',
+        //     //'location' =>  '32.527258' ,'-117.121486',
+        //     'casualties' => '300',
+        //     'description' => 'Desastre ocurrido en el parque méxico de playas de tijuana, perro atropellado'
 
-        ]);
+        // ]);
+
+        
     }
 }

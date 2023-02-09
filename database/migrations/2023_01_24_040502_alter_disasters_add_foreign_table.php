@@ -33,4 +33,4 @@ return new class extends Migration
             $table->dropForeign('disasters_damage_level_id_foreign');    
         });
     }
-};
+}; 

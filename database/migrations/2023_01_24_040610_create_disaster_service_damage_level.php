@@ -14,14 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('disaster_service_damage_level', function (Blueprint $table) {
-            $table->unsignedBigInteger('disaster_id');
-            $table->unsignedBigInteger('public_service_id');
-            $table->unsignedBigInteger('damage_level_id');
-
-            $table->foreign('disaster_id')->references('id')->on('disasters');
-            $table->foreign('public_service_id')->references('id')->on('public_services');
-            $table->foreign('damage_level_id')->references('id')->on('damage_levels');
-
+            $table->foreignId('disaster_id')->constrained('disasters');
+            $table->foreignId('public_service_id')->constrained('public_services');
+            $table->foreignId('damage_level_id')->constrained('damage_levels');           
         });
     }
 

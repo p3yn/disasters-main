@@ -15,14 +15,13 @@ return new class extends Migration
     {
         Schema::create('disasters', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('disaster_type_id')->constrained('disaster_types');
-            $table->foreignId('city_id')->constrained('cities');
-            $table->foreignId('damage_level_id')->constrained('damage_levels');
+            $table->unsignedBigInteger('disaster_type_id');
+            $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('damage_level_id');
             $table->point('location');
             $table->integer('casualties')->default(0);
             $table->text('description')->nullable();
-            $table->timestamps();
-                      
+            $table->timestamps();                     
         });
     }
 
