@@ -26,5 +26,5 @@ Route::get('/disaster-type', [DisasterTypeController::class, 'index']);
 Route::post('/disaster-type', [DisasterTypeController::class, 'store']);
 Route::get('/public-services', [PublicServiceController::class, 'index']);
 Route::post('/public-services', [PublicServiceController::class, 'store']);
-//Route::get('/disaster', [DisasterController::class, 'index']);
-Route::post('/disaster', [DisasterController::class, 'store']);
+Route::get('/disaster', [DisasterController::class, 'index']);
+//Route::post('/disaster', [DisasterController::class, 'store']);

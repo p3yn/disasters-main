@@ -10,6 +10,15 @@ use Exception;
 
 class DisasterController extends Controller
 {
+    public function index(DisasterStoreRequest $request){
+        try{ 
+            $disasters = Disaster::get();
+            return response()->json($disasters);
+        }catch(Exception $e){ 
+            return response()->json($disasters);
+        }
+    }
+    
     public function store(DisasterStoreRequest $request) {
         try {
             $latitude = $request->latitude;

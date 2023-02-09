@@ -11,16 +11,15 @@ class Disaster extends Model
 
     protected $fillable = 
             [
-            'location', 
-            'casualties', 
-            'description', 
-            'damage_level_id', 
-            'city_id', 
-            'date', 
-            'time', 
-            'disaster_type_id', 
-            'city_id'
-        ];
+                'disaster_type_id',
+                'city_id',
+                'damage_level_id', 
+                'date', 
+                'time',
+                'location', 
+                'casualties', 
+                'description',         
+            ];
 
     public function scopeDamageLevel() {
         return $this->belongsTo(DamageLevel::class);
