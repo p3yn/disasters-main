@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\PublicService;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
 
 class Public_ServicesSeeder extends Seeder
 {
@@ -14,8 +16,24 @@ class Public_ServicesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('public_services')->insert([
-            'name' => Str::random(10)->count(50)
-        ]);
+        PublicService::firstOrCreate([
+                'name' => 'Agua'
+            ]);
+    
+            PublicService::firstOrCreate([
+                'name' => 'Luz'
+            ]);
+    
+            PublicService::firstOrCreate([
+                'name' => 'Gas'
+            ]);
+    
+            PublicService::firstOrCreate([
+                'name' => 'Drenaje'
+            ]);
+    
+            PublicService::firstOrCreate([
+                'name' => 'Internet'
+            ]);    
     }
 }

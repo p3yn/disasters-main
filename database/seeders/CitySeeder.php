@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\City;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CitySeeder extends Seeder
 {
@@ -14,8 +15,24 @@ class CitySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cities')->insert([
-            'name' => Str::random(10)->count(50)
-        ]);
+        City::firstOrCreate([
+                'name' => 'Rosarito'
+            ]);
+
+        City::firstOrCreate([
+                'name' => 'Tijuana'
+            ]);
+
+        City::firstOrCreate([
+                'name' => 'Ensenada'
+            ]);
+
+        City::firstOrCreate([
+                'name' => 'Mexicali'
+            ]);
+            
+        City::firstOrCreate([
+                'name' => 'Tecate'
+            ]);
     }
 }

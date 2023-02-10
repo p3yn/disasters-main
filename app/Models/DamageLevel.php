@@ -9,5 +9,5 @@ class DamageLevel extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['name', 'level'];
+    protected $fillable = ['level', 'name'];
 }

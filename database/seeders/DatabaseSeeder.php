@@ -3,12 +3,17 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\City;
-use App\Models\PublicService;
-use App\Models\DamageLevel;
-use App\Models\Disaster;
-use App\Models\DisasterType;
+
+// use App\Models\Disaster;
+// use App\Models\DamageLevel;
+// use App\Models\DisasterType;
+
+use Illuminate\Database\Seeder;
+use Database\Seeders\CitySeeder;
+use Database\Seeders\Damage_LevelSeeder;
+use Database\Seeders\Public_ServicesSeeder;
+use Database\Seeders\Disaster_TypesSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,53 +24,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // City::firstOrCreate([
-        //     'name' => 'Rosarito'
-        // ]);
-        // City::firstOrCreate([
-        //     'name' => 'Tijuana'
-        // ]);
-        // City::firstOrCreate([
-        //     'name' => 'Ensenada'
-        // ]);
-        // City::firstOrCreate([
-        //     'name' => 'Mexicali'
-        // ]);
-        // City::firstOrCreate([
-        //     'name' => 'Tecate'
-        // ]);
-
-        // PublicService::firstOrCreate([
-        //     'name' => 'Agua'
-        // ]);
-
-        // PublicService::firstOrCreate([
-        //     'name' => 'Luz'
-        // ]);
-
-        // PublicService::firstOrCreate([
-        //     'name' => 'Gas'
-        // ]);
-
-        // PublicService::firstOrCreate([
-        //     'name' => 'Drenaje'
-        // ]);
-
-        // PublicService::firstOrCreate([
-        //     'name' => 'Internet'
-        // ]);
-        
-        // DamageLevel::firstOrCreate([
-        //     'name' => 'Perdida total',
-        //     'level' => '0'
-        // ]);
+        $this->call([
+            CitySeeder::class,
+            Public_ServicesSeeder::class,
+            Damage_LevelSeeder::class,
+            Disaster_TypesSeeder::class
+        ]);
 
         // DisasterType::firstOrCreate([
         //     'name' =>  'Emergencia Policial',
         //     'code' => 'EMP'
         // ]);
-
-
 
         // Disaster::firstOrCreate([
         //     'date' => '',
@@ -76,6 +45,6 @@ class DatabaseSeeder extends Seeder
 
         // ]);
 
-        
+
     }
 }
